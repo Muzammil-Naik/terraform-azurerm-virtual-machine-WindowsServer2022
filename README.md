@@ -21,14 +21,37 @@ module "windows_vm" {
     vnet_location      = "eastus" 
     vnet_Address_Space = ["10.0.0.0/16"] 
     subnet_Name        = "eastus-snet" 
+    vnet_tags             = {   
+                                "Key1" = "Value1" 
+                                "Key2" = "VAlue2" 
+                            }
     address_prefixes   = ["10.0.1.0/24"] 
     NSG_name           = "eastus_NSG" 
     NSG_Rule           = ["80", "443", "3389"] 
+    NSG_tags               = {   
+                                "Key1" = "Value1" 
+                                "Key2" = "VAlue2" 
+                            }
     NIC_Name           = "mainnic" 
+    NIC_tags               = {   
+                                "Key1" = "Value1" 
+                                "Key2" = "VAlue2" 
+                            }
     PIP_Name           = "eastusPIP" 
+    PIP_tags               = {   
+                                "Key1" = "Value1" 
+                                "Key2" = "VAlue2" 
+                            }
     VM_Name            = "delvm" 
     VM_Size            = "Standard_DS1_v2" 
     VM_Admin_UN        = "UserName" 
     VM_Admin_PW        = "********" 
+    VM_tags               = {   
+                                "Key1" = "Value1" 
+                                "Key2" = "VAlue2" 
+                            }
+
+    #All tags are optional
+
 }
 ```
