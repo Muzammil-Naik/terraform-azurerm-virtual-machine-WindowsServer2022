@@ -57,7 +57,7 @@ resource "azurerm_windows_virtual_machine" "vm" {
   resource_group_name   = var.rg_name
   size                  = "Standard_DS1_v2"
   admin_username        = "vm"
-  admin_password        = "Muzzu$#123"
+  admin_password        = "****"
   network_interface_ids = [azurerm_network_interface.nic.id]
   os_disk {
     caching              = "ReadWrite"
